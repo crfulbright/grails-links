@@ -11,7 +11,13 @@ import org.junit.*
 @TestFor(LinkUser)
 class LinkUserTests {
 
-    void testSomething() {
-       fail "Implement me"
+    void testToString() {
+       def linkUser = new LinkUser(
+          userName: 'TestUser',
+          userPassword: 'Pass1234',
+          publicURL: '/testPublicURL/',
+          privateURL: '/testPrivateURL/',
+          userLinkHomeID: '1234')
+       assertEquals 'TestUser, Pass1234, /testPublicURL/', linkUser.toString()
     }
 }

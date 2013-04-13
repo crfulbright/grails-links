@@ -11,7 +11,9 @@ import org.junit.*
 @TestFor(LinkUserHome)
 class LinkUserHomeTests {
 
-    void testSomething() {
-       fail "Implement me"
+    void testToString() {
+       def linkUserHome = new LinkUserHome(
+          category: 'News')
+       assertEquals 'News', linkUserHome.toString()
     }
 }

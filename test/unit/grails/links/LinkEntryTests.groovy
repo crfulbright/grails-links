@@ -10,8 +10,12 @@ import org.junit.*
  */
 @TestFor(LinkEntry)
 class LinkEntryTests {
-
-    void testSomething() {
-       fail "Implement me"
+    
+    void testToString() {
+       def linkEntry = new LinkEntry(
+          linkURL: 'www.cnn.com',
+          linkType: 'public')
+       assertEquals 'www.cnn.com, public', linkEntry.toString()
     }
+    
 }
